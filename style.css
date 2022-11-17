@@ -19,3 +19,6 @@ main{
 .display-block{
     display: block;
 }
+textarea{
+    width: 100%;
+}
