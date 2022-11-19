@@ -44,5 +44,6 @@ function addText(){
     documentMain.insertAdjacentHTML('beforeend', textHTML)
     textArea.value = ''
     textArea.focus()
+    closeModal()
 }
 
