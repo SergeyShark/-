@@ -1,29 +1,48 @@
-const buttonAdd = document.querySelector("#dropdown-menu")
-const modal = document.querySelector("#modal")
-const close = document.querySelector('.btn-close')
-const textArea = document.querySelector('#textarea')
+// тело документа
 const documentBody = document.querySelector('body')
+const documentMain = document.querySelector('main')
+const modal = document.querySelector("#modal")
+const modalContent = document.querySelector('.modal-content')
+const textArea = document.querySelector('#textarea')
 
-modal.addEventListener('click', addText)
+// кнопки верхней панели
+const theme = document.querySelector('#theme')
+const buttonAddText = document.querySelector("#textHTML")
 
-buttonAdd.addEventListener('click', openModal)
-close.addEventListener('click', closeModal)
+// кнопки модального окна
+const buttonCloseModal = document.querySelector('.btn-close')
+const buttonSaveChanges = document.querySelector('#saveText')
 
-function openModal() {
-    console.log('text')
-    modal.classList.add('display-block')
+// слушатели верхней панели
+buttonAddText.addEventListener('click', openModal)
+theme.addEventListener('click', changeTheme)
+
+// слушатели модального окна
+buttonSaveChanges.addEventListener('click', addText)
+buttonCloseModal.addEventListener('click', closeModal)
+
+
+
+function changeTheme(){ 
+    documentBody.classList.toggle('black')
+    modalContent.classList.toggle('gray')
+    buttonSaveChanges.classList.toggle('btn-secondary')
+    buttonSaveChanges.classList.toggle('btn-light')
 }
 
+function openModal() {
+    modal.classList.add('display-block')
+}
+function closeModal(){
+    modal.classList.remove('display-block')
+}
 
 function addText(){
     const text = textArea.value
     const textHTML = `<p>${text}</p>`
     console.log(textHTML)
-    documentBody.insertAdjacentHTML('beforeend', textHTML)
+    documentMain.insertAdjacentHTML('beforeend', textHTML)
     textArea.value = ''
     textArea.focus()
 }
 
-function closeModal(){
-    modal.classList.remove('display-block')
-}
