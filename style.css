@@ -40,3 +40,15 @@ main{
     max-width: 75%;
     margin-top: 2em;
 }
+.center{
+    display: flex;
+    justify-content: center;
+}
+.right{
+    display: flex;
+    justify-content: end;
+}
+.left{
+    display: flex;
+    justify-content: start;
+}
