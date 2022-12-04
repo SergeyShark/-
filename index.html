@@ -23,7 +23,7 @@
     <div class="button-bar" id="button-bar">
       <div class="btn-group" id="btn-group">
         <button type="button" class="btn btn-secondary" id="theme">сменить тему</button>
-        <button type="button" class="btn btn-secondary" id="textHTML">Добавить текст</button>
+        <button type="button" class="btn btn-secondary" id="p">Добавить текст</button>
         <button
           type="button"
           class="btn btn-secondary dropdown-toggle dropdown-toggle-split"
@@ -36,21 +36,30 @@
         
 
         <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#">h1</a></li>
-          <li><a class="dropdown-item" href="#">h2</a></li>
-          <li><a class="dropdown-item" href="#">h3</a></li>
-          <li><a class="dropdown-item" href="#">h4</a></li>
-          <li><a class="dropdown-item" href="#">h5</a></li>
-          <li><a class="dropdown-item" href="#">h6</a></li>
+          <li><a id="h1" class="dropdown-item" href="#">h1</a></li>
+          <li><a id="h2" class="dropdown-item" href="#">h2</a></li>
+          <li><a id="h3" class="dropdown-item" href="#">h3</a></li>
+          <li><a id="h4" class="dropdown-item" href="#">h4</a></li>
+          <li><a id="h5" class="dropdown-item" href="#">h5</a></li>
+          <li><a id="h6" class="dropdown-item" href="#">h6</a></li>
         </ul>
       </div>
     </div>
-
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        выравнивание текста
+      </button>
+      <ul class="dropdown-menu">
+        <li id="leftSide"><a class="dropdown-item" href="#">По левому краю</a></li>
+        <li id="center"><a class="dropdown-item" href="#">По центу</a></li>
+        <li id="rightSide"><a class="dropdown-item" href="#">По правому краю</a></li>
+      </ul>
+    </div>
     <div class="modal" tabindex="-1" id="modal">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title">Заголовок модального окна</h5>
+            <h5 class="modal-title">Текст параграфа или заголовка</h5>
             <button
               type="button"
               class="btn-close"
@@ -62,7 +71,7 @@
             <textarea
               name=""
               id="textarea"
-              rows="10"
+              rows="8"
               placeholder="Введите свой текст"
             ></textarea>
           </div>
@@ -76,7 +85,7 @@
     </div>
     </header>
     <main>
-
+      
     </main>
     <script src="index.js"></script>
   </body>
